@@ -215,7 +215,6 @@ public class SquishBot
 					}
 				}
 			}
-			//else if(OverFood )
 		}
 		else if(sleep < 0.35 || sleeping)
 		{
@@ -231,7 +230,7 @@ public class SquishBot
 				}
 			}
 				
-			if(body.getLayoutX() < shelterBody.getLayoutX()+100)
+			else if(body.getLayoutX() < shelterBody.getLayoutX()+100)
 			{
 				moveRight();
 			}
@@ -245,16 +244,6 @@ public class SquishBot
 		{
 			currentAction.setText("Idle");
 
-			boolean coinFlip = (int)(Math.random()+0.5) > 0;
-			
-			if(coinFlip)
-			{
-				moveRight();
-			}
-			else
-			{
-				moveLeft();
-			}			
 		}
 		
 		timer -= 1;
